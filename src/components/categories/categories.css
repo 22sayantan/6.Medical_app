@@ -1,0 +1,17 @@
+.categories{
+    height: 10rem;
+    padding: 2rem;
+    border: 1px solid gray;
+
+    z-index: 1;
+}
+
+.categories ul{
+    list-style: none;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    /* border: 1px solid green; */
+}
+

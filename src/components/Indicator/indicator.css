@@ -1,0 +1,40 @@
+.indicator{
+    height: 18rem;
+    width: 100%;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    margin-top: 1.2rem;
+
+    box-shadow: 10px 10px 10px gainsboro;
+}
+
+.indicator .ind-left{
+    height: 16rem;
+    width: 5rem;
+    /* border: 1px solid red; */
+}
+.indicator .ind-middle {
+    height: 16rem;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    
+    column-gap: 2rem;
+    margin-top: -10px;
+
+    /* border: 1px solid blue; */
+}
+
+.indicator .ind-right{
+    /* border: 1px solid red; */
+
+    height: 16rem;
+    width: 5rem;
+}

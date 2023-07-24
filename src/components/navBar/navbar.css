@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myNav{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+
+    color: white;
+    height: 8vh;
+}
+
+.left{
+    flex: 6;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.left img:hover{
+    /* color: blue; */
+    scale: 1.2;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.center {
+    flex: 3;
+    padding: 0 20px;
+}
+
+.center ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.center ul li a{
+    color: white;
+    text-transform: capitalize;
+}
+
+.center ul li:hover{
+    transform: scale(1.3);
+}
+
+.center ul li a:hover{
+    /* color: blue; */
+    font-weight: 600;
+}
+
+.center .navList li:last-child a{
+    font-size: 20px;
+    color: yellow;
+}
+
+.center .navList li a .cart-icon{
+    transform: rotateY(180deg);
+}
+.right{
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.right i{
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+
+    margin-right: 10px;
+}
+
+.right i:hover{
+    cursor: pointer;
+    color: cyan;
+
+    scale: 1.3;
+    border-radius: 50%;
+}
+
+
+/* ............veritcal Menu ................. */
+.vertical-menu{
+    display: none;
+    background-color: whitesmoke;
+    
+    width: 11rem;
+    height: calc(200vh);
+
+    margin-left: auto;
+    top: 8vh;
+    left: 83.96rem;
+
+    border-left: 1px solid gray;
+    overflow: visible;
+    position: absolute;
+    z-index: 2;
+}
+
+.vertical{
+    display: block;
+}
+
+.vertical-menu .vertical-list {
+    list-style: none;
+    
+    width: auto;
+    padding: 10px;
+}
+
+.vertical-menu .vertical-list li{
+    width: 8rem;
+
+    background-color: white;
+    margin-top: 8px;
+    padding: 8px;
+
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.vertical-menu .vertical-list li:hover {
+    cursor: pointer;
+
+    text-transform: capitalize;
+    scale: 1.02;
+
+    color: blueviolet;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: white;
+
+    box-shadow: 5px 5px 5px gray;
+}

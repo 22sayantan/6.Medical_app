@@ -1,0 +1,66 @@
+.postcard{
+    height: 15rem;
+    width: 12rem;
+
+    border-radius: 5px;
+
+    box-shadow: 3px 3px 3px 4px lightgray;
+}
+
+.postcard:hover{
+    cursor: pointer;
+}
+.postcard:hover img{
+    transform: scale(1.1);
+}
+.postcard img{
+    height: 9rem;
+    width: 10.5rem;
+
+    margin: 11px;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+.postcard .desc{
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    padding: 5px 10px;
+    
+}
+
+.postcard .desc h3{
+    height: 1rem;
+    width: 11rem;
+
+    font-family: sans-serif;
+    font-size: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.postcard .desc p{
+    height: 1.6rem;
+    width: 3.4rem;  
+    color: gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 15px;
+    margin-left: -5px;
+}
+.postcard .desc .timeIcon{
+    font-size: 16px;
+}
+.postcard .desc p time{
+    font-family: sans-serif;
+    font-size: 14px;
+
+
+}
