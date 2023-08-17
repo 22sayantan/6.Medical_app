@@ -7,10 +7,8 @@ import Cart from "./components/pages/Cart/Cart";
 import UserProfile from "./components/pages/UserProfile/UserProfile";
 import Medicine from "./components/pages/Medicine/Medicine";
 
-// React router ::......::.......::.......::-----
 
 function App() {
-  // console.log(names[index])
 
   return (
     <>
