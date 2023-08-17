@@ -9,6 +9,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    margin-top: 9vh;
 }
 
 .myNav{
@@ -18,6 +20,12 @@ body{
 
     color: white;
     height: 8vh;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    overflow: hidden;
 }
 
 .left{
@@ -36,6 +44,7 @@ body{
 .center {
     flex: 3;
     padding: 0 20px;
+
 }
 
 .center ul{
@@ -43,15 +52,33 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 20px;
-}
+    overflow: hidden;
 
+    margin: 0;
+    padding: 0;
+}
+.center ul li{
+    transition: all 0.3s ease-in-out;
+}
 .center ul li a{
+    display: block;
     color: white;
     text-transform: capitalize;
+
+    padding: 9px 16px;
 }
 
 .center ul li:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
+}
+
+.center ul .active{
+    display: block;
+    background-color: white;
+}
+
+.center ul .active a{
+    color: black;
 }
 
 .center ul li a:hover{
@@ -59,13 +86,19 @@ body{
     font-weight: 600;
 }
 
-.center .navList li:last-child a{
+.center .navList .cart-icon{
     font-size: 20px;
     color: yellow;
 }
 
+.center .navList .userProfile{
+    font-size: 28px;
+}
+
 .center .navList li a .cart-icon{
     transform: rotateY(180deg);
+
+    font-size: 32px;
 }
 .right{
     flex: auto;

@@ -1,12 +1,18 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './navbar.css'
 
 import {BsFillCartFill} from 'react-icons/bs'
+import {CgProfile} from 'react-icons/cg'
 
 
 import {Link } from 'react-router-dom';
 
 function NavBar() {
+    const [activeNavItem, setActiveNavItem] = useState('home');
+
+    const handleNavItemClick = (itemName) => {
+        setActiveNavItem(itemName);
+      };
 
     useEffect(() => {
         var hamburger = document.querySelector('#hamburger');
@@ -46,11 +52,19 @@ function NavBar() {
 
             <div className="center">
                 <ul className="navList">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/categories">categories</Link></li>
-                    <li><Link to="/cart"><BsFillCartFill className='cart-icon'/></Link></li>
+                    <li className={`nav-item ${activeNavItem === 'home' ? 'active' : ''}`}>
+                        <Link to="/" onClick={() => handleNavItemClick('home')}>Home</Link>
+                    </li>
+                    <li className={`nav-item ${activeNavItem === 'about' ? 'active' : ''}`}>
+                        <Link to="/about" onClick={() => handleNavItemClick('about')}>About</Link>
+                    </li>
+    
+                    <li className={`nav-item ${activeNavItem === 'cart' ? 'active' : ''}`}>
+                        <Link to="/cart" className='cart-icon' onClick={() => handleNavItemClick('cart')}><BsFillCartFill className='cart-icon'/></Link>
+                    </li>
+                    <li className={`nav-item ${activeNavItem === 'signin' ? 'active' : ''}`}>
+                        <Link to="/signin" onClick={() => handleNavItemClick('signin')}><CgProfile className='userProfile'/></Link>
+                    </li>
                 </ul>
             </div>
 

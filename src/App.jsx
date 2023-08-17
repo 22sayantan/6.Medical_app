@@ -1,50 +1,31 @@
-import './App.css'
-import Indicator from './components/Indicator/Indicator'
-import Categories from './components/categories/Categories'
-import Footer from './components/footer/Footer'
-import About from './components/pages/about/About'
-// import NavBar from './components/navBar/NavBar'
-import Login from './components/pages/login/Login'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
-
+import Home from '../src/components/pages/Home/Home';
+import About from '../src/components/pages/About/About'
+import Cart from "./components/pages/Cart/Cart";
+import UserProfile from "./components/pages/UserProfile/UserProfile";
+import Medicine from "./components/pages/Medicine/Medicine";
 
 // React router ::......::.......::.......::-----
 
-
 function App() {
-
-  const IndObj = [
-    {
-      title:'services',
-      nameList: ['chekup','consulting', 'lab test','ambulance']
-    },
-    {
-      title:'check up',
-      nameList: ['eye','ear','cardio','body']
-    },
-    {
-      title:'ambulance',
-      nameList: ['accident','oldage','pregnant','murder/suicide']
-    }
-  ];
-
-  const listItems = IndObj.map((item,index) =>
-        <Indicator key={index} title={item.title} nameList={item.nameList} 
-        />
-  )
-      // console.log(names[index])
+  // console.log(names[index])
 
   return (
     <>
-      {/* <Categories/> */}
-        {/* {listItems} */}
-      {/* <Footer/> */}
+       <Routes>
+        <Route index path='/' element={<Home/>}/>
+        <Route exact path='/about' element={<About/>}/>
+        <Route exact path='/cart' element={<Cart/>}/>
+        <Route exact path='/signin' element={<UserProfile/>}/>
+      </Routes>
 
-      <Login/>
-
-
+      <Routes>
+        <Route exact path='/medicine' element={<Medicine/>}/>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
