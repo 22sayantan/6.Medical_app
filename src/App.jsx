@@ -6,6 +6,7 @@ import Home from '../src/components/pages/Home/Home';
 import Cart from "./components/pages/Cart/Cart";
 import UserProfile from "./components/pages/UserProfile/UserProfile";
 import Medicine from "./components/pages/Medicine/Medicine";
+import Ambulance from "./components/pages/Ambulance/Ambulance";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
       <Routes>
         <Route exact path='/medicine' element={<Medicine/>}/>
+        <Route exact path='/ambulance' element={<Ambulance/>}/>
       </Routes>
     </>
   );
